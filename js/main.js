@@ -4,7 +4,6 @@
 
   fixedScroll = (function() {
     function fixedScroll() {
-      console.log('lalal');
       this.$containers = $('.container-l');
       this.$bh = $('body');
       this.$w = $(window);
@@ -24,8 +23,6 @@
     fixedScroll.prototype.scroll = function() {
       var st;
 
-      console.log(this);
-      console.log('scroll');
       if (!this.allowScroll) {
         return;
       }
@@ -40,7 +37,6 @@
     };
 
     fixedScroll.prototype.scrollDown = function() {
-      console.log('scroll down');
       if (this.$bh.scrollTop() > this.$containers.eq(this.elemI).position().top) {
         this.elemI++;
         this.elemI > this.$containers.length - 1 && (this.elemI = this.$containers.length - 1);
